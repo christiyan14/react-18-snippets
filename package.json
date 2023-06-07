@@ -3,7 +3,7 @@
   "displayName": "React 18 Snippets",
   "description": "React 18 snippets for functional components you will actually use",
   "version": "1.0.0",
-  "publisher": "kristiyan velkov",
+  "publisher": "kristiyanvelkov",
   "icon": "images/react-logo.png",
   "repository": {
     "type": "git",
@@ -12,7 +12,7 @@
   "scripts": {
     "vscode:prepublish": "tsc -p ./",
     "compile": "tsc -watch -p ./",
-    "test": "node ./node_modules/@vscode/test-electron/out/runTest.js"
+    "test": "node ./node_modules/@vscode/test-electron/dist/runTest.js"
   },
   "keywords": [
     "React",
@@ -30,8 +30,8 @@
   "activationEvents": [
     "onCommand:extension.stayClassy"
   ],
-  "main": "./out/src/extension",
-  "browser": "./out/src/extension",
+  "main": "./dist/src/extension",
+  "browser": "./dist/src/extension",
   "contributes": {
     "snippets": [
       {
