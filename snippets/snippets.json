@@ -1,0 +1,352 @@
+{
+  "Import React": {
+    "prefix": "ri",
+    "body": [
+      "import React from 'react';\n"
+    ],
+    "description": "Import React"
+  },
+  "Import ReactDOM": {
+    "prefix": "ridom",
+    "body": [
+      "import ReactDOM from 'react-dom/client';"
+    ],
+    "description": "Import ReactDOM"
+  },
+  "Import useState": {
+    "prefix": "riustate",
+    "body": [
+      "import React, { useState } from 'react';\n"
+    ],
+    "description": "Import React, { useState }"
+  },
+  "Import React, { useState, useEffect }": {
+    "prefix": "riustateueffect",
+    "body": [
+      "import React, { useState, useEffect } from 'react';\n"
+    ],
+    "description": "Import React, { useState, useEffect }"
+  },
+  "Import PropTypes": {
+    "prefix": "riprototype",
+    "body": [
+      "import PropTypes from 'prop-types';"
+    ],
+    "description": "Import PropTypes"
+  },
+  "Functional Component": {
+    "prefix": "rfc",
+    "body": [
+      "import React from 'react';",
+      "",
+      "function ${1:ComponentName}() {",
+      "  return (",
+      "    <>",
+      "      $2",
+      "    </>",
+      "  );",
+      "}",
+      "",
+      "export default ${1:ComponentName};"
+    ],
+    "description": "Functional Component"
+  },
+  "Arrow Functional Component": {
+    "prefix": "rafc",
+    "body": [
+      "import React from 'react';",
+      "",
+      "const ${1:ComponentName} = ($2) => (",
+      "  <>",
+      "    $3",
+      "  </>",
+      ");",
+      "",
+      "export default ${1:ComponentName};"
+    ],
+    "description": "Arrow Functional Component"
+  },
+  "Custom Hook": {
+    "prefix": "rcustomhook",
+    "body": [
+      "import { useEffect, useState } from 'react';",
+      "",
+      "function use${1:HookName}() {",
+      "  const [${2:state}, set${2/(.*)/${1:/capitalize}/}] = useState(${3});",
+      "",
+      "  useEffect(() => {",
+      "    return;",
+      "  }, []);",
+      "",
+      "  return ${4:state};",
+      "}",
+      "",
+      "export default use${1:HookName};"
+    ],
+    "description": "Custom Hook"
+  },
+  "Custom Hook (Arrow)": {
+    "prefix": "racustomhook",
+    "body": [
+      "import { useEffect, useState } from 'react';",
+      "",
+      "const use${1:HookName} = () => {",
+      "  const [${2:state}, set${2/(.*)/${1:/capitalize}/}] = useState(${3});",
+      "",
+      "  useEffect(() => {",
+      "     return;",
+      "  }, []);",
+      "",
+      "  return (",
+      "     <>",
+      "       $4",
+      "     </>",
+      "   );",
+      " };",
+      "",
+      "export default use${1:HookName};"
+    ],
+    "description": "Custom Hook (Arrow)"
+  },
+  "useEffect Hook": {
+    "prefix": "rueffect",
+    "body": [
+      "useEffect(() => {",
+      "  return () => {",
+      "    $2",
+      "  };",
+      "}, [${1}]);"
+    ],
+    "description": "useEffect Hook"
+  },
+  "useState": {
+    "prefix": "rustate",
+    "body": [
+      "const [${2:state}, set${2/(.*)/${1:/capitalize}/}] = useState(${3});"
+    ],
+    "description": "useState Hook"
+  },
+  "useContext Hook": {
+    "prefix": "rucontext",
+    "body": [
+      "const ${1:contextValue}Context = useContext();"
+    ],
+    "description": "useContext Hook"
+  },
+  "useRef Hook": {
+    "prefix": "ruref",
+    "body": [
+      "const ${1:refName} = useRef(${2});"
+    ],
+    "description": "useRef Hook"
+  },
+  "useMemo Hook": {
+    "prefix": "rumemo",
+    "body": [
+      "const ${1:memoizedValue} = useMemo(() => {",
+      "  return ${2};",
+      "}, [${3}]);"
+    ],
+    "description": "useMemo Hook"
+  },
+  "useCallback Hook": {
+    "prefix": "rucallback",
+    "body": [
+      "const ${1:callback} = useCallback((${2}) => {",
+      "}, [${3}]);"
+    ],
+    "description": "useCallback Hook"
+  },
+  "useDebugValue Hook": {
+    "prefix": "rudebugvalue",
+    "body": [
+      "useDebugValue(${1});"
+    ],
+    "description": "useDebugValue Hook"
+  },
+  "useDeferredValue Hook": {
+    "prefix": "rudeferredvalue",
+    "body": [
+      "const ${1} = useDeferredValue(${2});"
+    ],
+    "description": "useDeferredValue Hook"
+  },
+  "useId Hook": {
+    "prefix": "ruid",
+    "body": [
+      "const ${1}Id = useId();"
+    ],
+    "description": "useId Hook"
+  },
+  "useLayoutEffect Hook": {
+    "prefix": "rulayouteffect",
+    "body": [
+      "useLayoutEffect(() => {",
+      "  return () => {",
+      "    $2;",
+      "  };",
+      "}, [${1}]);"
+    ],
+    "description": "useLayoutEffect Hook"
+  },
+  "useReducer Hook": {
+    "prefix": "rureducer",
+    "body": [
+      "const [state, dispatch] = useReducer(${1:reducer}, ${2:initialState});"
+    ],
+    "description": "useReducer Hook"
+  },
+  "useTransition Hook": {
+    "prefix": "rutransition",
+    "body": [
+      "const [startTransition, isPending] = useTransition({ timeoutMs: ${1:timeout} });"
+    ],
+    "description": "useTransition Hook"
+  },
+  "render": {
+    "prefix": "rrender",
+    "body": [
+      "render() {",
+      "\treturn (",
+      "\t\t $1",
+      "\t);",
+      "}"
+    ],
+    "description": "render"
+  },
+  "Fragment": {
+    "prefix": "rfragment",
+    "body": [
+      "<>",
+      "  $1",
+      "</>"
+    ],
+    "description": "Fragment"
+  },
+  "Fragment With key": {
+    "prefix": "rfragmentkey",
+    "body": [
+      "<Fragment key={$1}>",
+      "  $2",
+      "</Fragment>"
+    ],
+    "description": "Fragment with key prop"
+  },
+  "Profiler": {
+    "prefix": "rprofiler",
+    "body": [
+      "<Profiler",
+      "  id=\"$1\"",
+      "  onRender={${2:callback}}",
+      ">",
+      "  $3",
+      "</Profiler>"
+    ],
+    "description": "Profiler"
+  },
+  "StrictMode": {
+    "prefix": "rstrict",
+    "body": [
+      "<StrictMode>",
+      "  $1",
+      "</StrictMode>"
+    ],
+    "description": "StrictMode"
+  },
+  "Suspense": {
+    "prefix": "rsuspense",
+    "body": [
+      "<Suspense",
+      "  fallback={${1:FallbackComponent}}",
+      ">",
+      "  $2",
+      "</Suspense>"
+    ],
+    "description": "Suspense"
+  },
+  "forwardRef": {
+    "prefix": "rforwardref",
+    "body": [
+      "const ${1:ComponentName} = forwardRef((${2:props}, ref) => {",
+      "  // Component code here",
+      "});"
+    ],
+    "description": "forwardRef"
+  },
+  "lazy": {
+    "prefix": "rlazy",
+    "body": [
+      "const ${1:LazyComponent} = lazy(() => import('${2:componentPath}'));"
+    ],
+    "description": "lazy"
+  },
+  "startTransition": {
+    "prefix": "rstartTransition",
+    "body": [
+      "const [startTransition, isPending] = useTransition();",
+      "startTransition(() => {",
+      "  // Transition code here",
+      "});"
+    ],
+    "description": "startTransition"
+  },
+  "memo": {
+    "prefix": "rmemo",
+    "body": [
+      "const ${1:MemoizedComponent} = memo(${2:Component});"
+    ],
+    "description": "memo"
+  },
+  "Create Root": {
+    "prefix": "rroot",
+    "body": [
+      "const domNode = document.getElementById('root');",
+      "const root = createRoot(domNode);",
+      "root.render(<${1} />);"
+    ],
+    "description": "Create Root"
+  },
+  "handle function": {
+    "prefix": "rhandle",
+    "body": [
+      "function handle${1:EventName}($2) {",
+      "  $3",
+      "}"
+    ],
+    "description": "handle funtion"
+  },
+  "handle arrow function": {
+    "prefix": "rahandle",
+    "body": [
+      "const handle${1:EventName} = ($2) => {",
+      "  $3",
+      "};"
+    ],
+    "description": "handleEventName arrow function"
+  },
+  "Context Provider": {
+    "prefix": "rcontextprovider",
+    "body": [
+      "export const $1 = createContext();",
+      "",
+      "const $1Provider = (props) => {",
+      "\t// Initial Provider State",
+      "\tconst state = {};",
+      "",
+      "\t// Reducer Function",
+      "\tconst $2 = (state, action) => {",
+      "\t\t",
+      "\t};",
+      "",
+      "\treturn (",
+      "\t\t<$1.Provider value={{state: state, $2}}>",
+      "\t\t\t{props.children}",
+      "\t\t</$1.Provider>",
+      "\t);",
+      "}",
+      "",
+      "export default $1Provider;"
+    ],
+    "description": "Context Provider"
+  }
+}
